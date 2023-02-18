@@ -6,10 +6,27 @@ import 'package:flutter_application_1/image.dart';
 import 'package:flutter_application_1/list_usage.dart';
 import 'package:flutter_application_1/mycounter.dart';
 import 'package:flutter_application_1/popup_menu_usage.dart';
+import 'package:flutter_easyloading/flutter_easyloading.dart';
 
 void main() {
-  print("Main method called");
+  //print("Main method called");
   runApp(MyWidget());
+  configLoading();
+}
+void configLoading() {
+  EasyLoading.instance
+    ..displayDuration = const Duration(milliseconds: 2000)
+    ..indicatorType = EasyLoadingIndicatorType.fadingCircle
+    ..loadingStyle = EasyLoadingStyle.custom
+    ..indicatorSize = 45.0
+    ..radius = 10.0
+    ..progressColor = Colors.yellow
+    ..backgroundColor = Colors.green
+    ..indicatorColor = Colors.yellow
+    ..textColor = Colors.white
+    ..maskColor = Colors.blue.withOpacity(0.5)
+    ..userInteractions = true
+    ..dismissOnTap = false;
 }
 
 class MyWidget extends StatelessWidget {
@@ -25,7 +42,9 @@ class MyWidget extends StatelessWidget {
             
           ))
           ),
-        home: ListUsage());
+        home: ListUsage(),
+        builder: EasyLoading.init(),
+    );
   }
 
 /*
