@@ -8,6 +8,8 @@ import 'package:flutter_application_1/mycounter.dart';
 import 'package:flutter_application_1/popup_menu_usage.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 
+import 'gridview_usage.dart';
+
 void main() {
   //print("Main method called");
   runApp(MyWidget());
@@ -42,7 +44,7 @@ class MyWidget extends StatelessWidget {
             
           ))
           ),
-        home: ListUsage(),
+        home: GridViewUsage(),
         builder: EasyLoading.init(),
     );
   }

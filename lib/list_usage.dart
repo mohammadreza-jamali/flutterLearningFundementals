@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
 class ListUsage extends StatelessWidget {
@@ -22,6 +23,30 @@ class ListUsage extends StatelessWidget {
               duration: Duration(seconds: 5),
               toastPosition: EasyLoadingToastPosition.bottom,
               dismissOnTap: true);
+            },
+            onLongPress: (){
+              showDialog(barrierDismissible: false,context: context, builder: (context) {
+                return AlertDialog(
+                  title: Text(items[index].toString()),
+                  content: SingleChildScrollView(
+                    child:ListBody(
+                      children: [
+                        Text(" this is test"*200)
+                      ],
+                    )
+                     ),
+                     actions: [
+                      
+                          TextButton(onPressed: () {}, child: Text("Ok")),
+                                TextButton(
+                                    onPressed: () {
+                                      Navigator.pop(context);
+                                    }, child: Text("Cancel")),
+  
+                      
+                     ],
+                );
+              });
             },
                       leading: CircleAvatar(
                         child: Text(items[index].id.toString()),
@@ -62,4 +87,6 @@ class Person{
   String name;
   String lastName;
   Person(this.id,this.name,this.lastName);
-}
+  @override
+  String toString() => "$name $lastName";
+ }
