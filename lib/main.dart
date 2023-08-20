@@ -5,6 +5,7 @@ import 'package:flutter_application_1/dropdown_usage.dart';
 import 'package:flutter_application_1/image.dart';
 import 'package:flutter_application_1/list_usage.dart';
 import 'package:flutter_application_1/mycounter.dart';
+import 'package:flutter_application_1/navigation/navigation_main.dart';
 import 'package:flutter_application_1/popup_menu_usage.dart';
 import 'package:flutter_application_1/sliver_usage.dart';
 import 'package:flutter_easyloading/flutter_easyloading.dart';
@@ -45,7 +46,7 @@ class MyWidget extends StatelessWidget {
             
           ))
           ),
-        home: SliversUsage(),
+        home: MyApp(),
         builder: EasyLoading.init(),
     );
   }
