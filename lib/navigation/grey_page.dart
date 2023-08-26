@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/navigation/navigation_main.dart';
 
 class GreyPage extends StatelessWidget {
   const GreyPage({super.key});
@@ -21,7 +22,9 @@ class GreyPage extends StatelessWidget {
             style: TextStyle(fontSize: 24),
           ),
           ElevatedButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).popUntil((route) => route.isFirst);
+            },
             child: const Text("Go to main page"),
             style: ElevatedButton.styleFrom(
                 backgroundColor: Colors.blue),

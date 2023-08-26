@@ -24,8 +24,10 @@ class RedPage extends StatelessWidget {
               const Text("This page is red page",style: TextStyle(fontSize: 24),),
               ElevatedButton(
               onPressed: () {
+                // Navigator.of(context)
+                //     .push(MaterialPageRoute(builder: (context) => GreenPage(10)));
                 Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (context) => GreenPage()));
+                    .pushNamed("/GreenPage",arguments: 25);
               },
               child: const Text("Go to green page"),
               style:

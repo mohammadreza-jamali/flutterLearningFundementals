@@ -2,7 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/navigation/yellow_page.dart';
 
 class GreenPage extends StatelessWidget {
-  const GreenPage({super.key});
+  const GreenPage(this.inputValue,{super.key});
+  final int inputValue;
 
   @override
   Widget build(BuildContext context) {
@@ -19,6 +20,10 @@ class GreenPage extends StatelessWidget {
         children: [
           const Text(
             "This page is green page",
+            style: TextStyle(fontSize: 24),
+          ),
+          Text(
+            "Passed Value Is $inputValue",
             style: TextStyle(fontSize: 24),
           ),
           ElevatedButton(
