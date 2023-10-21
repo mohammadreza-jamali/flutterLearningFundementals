@@ -3,6 +3,7 @@ import 'package:flutter_application_1/basic_buttons.dart';
 import 'package:flutter_application_1/card_tile.dart';
 import 'package:flutter_application_1/dropdown_usage.dart';
 import 'package:flutter_application_1/image.dart';
+import 'package:flutter_application_1/inputs/text_input.dart';
 import 'package:flutter_application_1/list_usage.dart';
 import 'package:flutter_application_1/mycounter.dart';
 import 'package:flutter_application_1/navigation/navigation_main.dart';
@@ -46,8 +47,7 @@ class MyWidget extends StatelessWidget {
             
           ))
           ),
-        home: MyApp(),
-        builder: EasyLoading.init(),
+        home: TextInputSample()
     );
   }
 
